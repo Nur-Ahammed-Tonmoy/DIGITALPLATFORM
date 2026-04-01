@@ -70,20 +70,7 @@ function App() {
           className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8"
           id="products"
         >
-          <div className="text-center">
-            <h2 className="text-4xl font-extrabold text-slate-800">
-              Premium Digital Tools
-            </h2>
-            <p className="mx-auto mt-3 max-w-xl text-sm text-slate-500">
-              Choose from our curated collection of premium digital products
-              designed to boost your productivity and creativity.
-            </p>
-            <ProductTabs
-              activeTab={activeTab}
-              cartCount={cartItems.length}
-              onTabChange={setActiveTab}
-            />
-          </div>
+          
 
           {activeTab === "products" ? (
             <ProductsGrid

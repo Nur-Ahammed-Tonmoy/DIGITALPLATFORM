@@ -23,19 +23,7 @@ function App() {
     [cartItems],
   );
 
-  const addToCart = (product) => {
-    const isAlreadyAdded = cartItems.some((item) => item.id === product.id);
-
-    if (isAlreadyAdded) {
-      toast.info(`${product.name} is already in your cart.`);
-      return;
-    }
-
-    setCartItems((previousItems) => [...previousItems, product]);
-    setLastAddedId(product.id);
-    toast.success(`${product.name} added to cart.`);
-    setTimeout(() => setLastAddedId(null), 1200);
-  };
+  
 
   const removeFromCart = (id) => {
     const removedProduct = cartItems.find((item) => item.id === id);

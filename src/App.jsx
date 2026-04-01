@@ -48,7 +48,15 @@ function App() {
     }
   };
 
-  
+  const handleProceedCheckout = () => {
+    if (!cartItems.length) {
+      toast.info("Your cart is empty.");
+      return;
+    }
+
+    setCartItems([]);
+    toast.success("Proceed to checkout successful. Cart cleared.");
+  };
 
   return (
     <div className="bg-[#f6f7fb] text-slate-800">

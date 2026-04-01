@@ -26,10 +26,7 @@ function App() {
   const addToCart = (product) => {
     const isAlreadyAdded = cartItems.some((item) => item.id === product.id);
 
-    if (isAlreadyAdded) {
-      toast.info(`${product.name} is already in your cart.`);
-      return;
-    }
+    
 
     setCartItems((previousItems) => [...previousItems, product]);
     setLastAddedId(product.id);

@@ -78,7 +78,11 @@ function App() {
               Choose from our curated collection of premium digital products
               designed to boost your productivity and creativity.
             </p>
-            
+            <ProductTabs
+              activeTab={activeTab}
+              cartCount={cartItems.length}
+              onTabChange={setActiveTab}
+            />
           </div>
 
           {activeTab === "products" ? (

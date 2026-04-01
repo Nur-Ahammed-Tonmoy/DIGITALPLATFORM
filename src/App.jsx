@@ -63,7 +63,7 @@ function App() {
       <Header cartCount={cartItems.length} />
 
       <main>
-        
+        <HeroSection bannerImage={bannerImage} />
         <StatsSection />
 
         <section

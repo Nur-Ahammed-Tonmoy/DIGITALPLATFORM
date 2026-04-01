@@ -37,7 +37,16 @@ function App() {
     setTimeout(() => setLastAddedId(null), 1200);
   };
 
-  
+  const removeFromCart = (id) => {
+    const removedProduct = cartItems.find((item) => item.id === id);
+    setCartItems((previousItems) =>
+      previousItems.filter((item) => item.id !== id),
+    );
+
+    if (removedProduct) {
+      toast.warn(`${removedProduct.name} removed from cart.`);
+    }
+  };
 
   const handleProceedCheckout = () => {
     if (!cartItems.length) {

@@ -14,7 +14,7 @@ import Footer from "./components/Footer";
 import { pricingPlans, products, stepCards } from "./data/catalogData";
 
 function App() {
-  
+  const [activeTab, setActiveTab] = useState("products");
   const [cartItems, setCartItems] = useState([]);
   const [lastAddedId, setLastAddedId] = useState(null);
 
